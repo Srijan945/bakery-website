@@ -1,0 +1,28 @@
+.header {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__home img {
+    width: 2rem;
+    color: brown;
+}
+.header__flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.header__flexbox__logo img {
+    width: 3.125rem;
+}
+.header__cart img {
+    width: 2rem;
+    color: brown;
+}
+.header__flexbox__name {
+    font-family: 'Croissant One', cursive;
+    color: rgb(123, 63, 0);
+}

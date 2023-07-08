@@ -1,0 +1,10 @@
+.itemGrid {
+    margin-top: 2rem;
+    display: grid;
+    gap: 0.625rem 0.625rem;
+}
+@media screen and (min-width: 600px) {
+    .itemGrid {
+        padding: 0 10%;
+    }
+}
