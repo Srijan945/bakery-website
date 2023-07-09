@@ -1,9 +1,11 @@
-import { useState } from "react";
-
-function Item({url,description,price}) {
+import { useEffect, useState } from "react";
+import './css/Item.css';
+import { Link } from "react-router-dom";
+function Item({url,name,price}) {
     
     const [cartClick, setCartClick] = useState(false);
     const [count,setCount] = useState(0);
+    const data= {count,name,price};
 
     function handleCartClick() {
         setCartClick(true);
@@ -23,18 +25,29 @@ function Item({url,description,price}) {
             }
         });
     }
+
+    useEffect(() => {
+        data.count = count;
+    },[count]);
+
     return <div className="item">
         <div className="item__img">
             <img src={url} alt='item-view' />
         </div>
-        <p className="item__description">{description}</p>
-        <p className="item__price">{price}</p>
+        <p className="item__name">{name}</p>
+        <p className="item__price">Price - {price}</p>
         {!cartClick && <p className="item__addToCart" onClick={handleCartClick}>Add To Cart</p>}
-        {cartClick && <div className="item__cartCounter">
+        {cartClick && <><div className="item__cartCounter">
             <p className="counterIcon" onClick={handleDecrement}>-</p>
             <p className="count">{count}</p>
             <p className="counterIcon" onClick={handleIncrement}>+</p>
-        </div>}    
+        </div>
+        <div className="checkout">
+            <Link to='/cart' state={data}>
+                <button>Checkout</button>
+            </Link>
+        </div>
+        </>}    
     </div>
 }
 

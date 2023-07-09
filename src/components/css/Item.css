@@ -1,0 +1,59 @@
+.item {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.625rem;
+    margin: 2rem;
+}
+.item__img img {
+    border-radius: 0.625rem;
+}
+.item__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: chocolate;
+    border-bottom: 1px solid chocolate;
+}
+.item__price {
+    font-size: 1.2rem;
+    color: green;
+    border-bottom: 1px solid chocolate;
+}
+.item__addToCart {
+   text-align: center;
+   color: red;
+   font-size: 1.5rem;
+   font-weight: 600;
+   cursor: pointer;
+}
+.item__cartCounter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    color: chocolate;
+}
+.count {
+    margin-left: 0.3125rem;
+    margin-right: 0.3125rem;
+}
+.counterIcon {
+    font-weight: bold;
+    cursor: pointer;
+}
+.checkout {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.checkout button {
+    width: 100%;
+    background-color: chocolate;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
