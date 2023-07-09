@@ -32,12 +32,6 @@ function Cart() {
             setCartData([...storedValue]);
         }
         store();
-        return () => {
-            if(!flag && location.state)
-            return sessionStorage.setItem('cartItems', JSON.stringify([...storedValue,location.state]));
-            else
-            return sessionStorage.setItem('cartItems', JSON.stringify([...storedValue]));
-        }
     },[location]);
 
     useEffect(() => {
@@ -46,6 +40,7 @@ function Cart() {
             sum += cartItem.price * cartItem.count;
         })
         setTotal(sum.toFixed(2));
+        sessionStorage.setItem('cartItems', JSON.stringify([...cartData]));
     },[cartData]);
     return <div className="cart">
         <h1>Cart - Check your Order</h1>
