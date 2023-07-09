@@ -7,9 +7,9 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path='/' exact Component={Home} />
-        <Route path='/cart' exact Component={Cart} />
-        <Route path='/payments' exact Component={Payments} />
+        <Route path='' exact Component={Home} />
+        <Route path='cart' exact Component={Cart} />
+        <Route path='payments' exact Component={Payments} />
         <Route path='*' Component={ErrorPage} />
       </Routes>
     </HashRouter>
